@@ -7,19 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/DayOne/DayOne.csproj",
-                "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary"
-            ],
-            "problemMatcher": "$msCompile"
-        },
-        {
-            "label": "publish",
-            "command": "dotnet",
-            "type": "process",
-            "args": [
-                "publish",
-                "${workspaceFolder}/DayOne/DayOne.csproj",
+                "${workspaceFolder}/Day2/Day2.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -33,7 +21,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/DayOne/DayOne.csproj"
+                "${workspaceFolder}/Day2/Day2.csproj"
             ],
             "problemMatcher": "$msCompile"
         }
