@@ -1,4 +1,5 @@
-﻿StepTwo();
+﻿StepOne();
+StepTwo();
 void StepOne(){
 var map = new Dictionary<char, Play>(){
     ['A'] = Play.Rock,

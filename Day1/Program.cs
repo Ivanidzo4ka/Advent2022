@@ -1,4 +1,5 @@
-﻿StepTwo();
+﻿StepOne();
+StepTwo();
 void StepOne(){
 
     Console.WriteLine(DataPoints().Max());
