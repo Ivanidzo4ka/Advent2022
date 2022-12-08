@@ -42,10 +42,10 @@ void Solution()
 
     }
     Fill(root);
-    
+
     Console.WriteLine(WalkOne(root));
-    long minSize = 30000000 - (70000000- root.TotalSize);
-     Console.WriteLine(WalkTwo(root, minSize));
+    long minSize = 30000000 - (70000000 - root.TotalSize);
+    Console.WriteLine(WalkTwo(root, minSize));
 }
 
 void Fill(Folder folder)
@@ -60,29 +60,31 @@ void Fill(Folder folder)
     {
         Fill(fol);
         total += fol.TotalSize;
-        
+
     }
     folder.TotalSize = total;
 }
 
-long WalkOne(Folder folder){
+long WalkOne(Folder folder)
+{
     long ans = 0;
-    foreach(var fol in folder.Folders.Values)
+    foreach (var fol in folder.Folders.Values)
     {
-        ans+=WalkOne(fol);
+        ans += WalkOne(fol);
     }
-    if (folder.TotalSize<=100000)
-        ans+=folder.TotalSize;
+    if (folder.TotalSize <= 100000)
+        ans += folder.TotalSize;
     return ans;
 }
 
 long WalkTwo(Folder folder, long size)
 {
     long ans = long.MaxValue;
-    if (folder.TotalSize>size)
+    if (folder.TotalSize > size)
     {
         ans = folder.TotalSize;
-        foreach(var fol in folder.Folders.Values){
+        foreach (var fol in folder.Folders.Values)
+        {
             ans = Math.Min(ans, WalkTwo(fol, size));
         }
     }
