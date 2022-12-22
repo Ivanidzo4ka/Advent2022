@@ -1,4 +1,4 @@
-﻿//Process(PartOneWalk);
+﻿Process(PartOneWalk);
 Process(PartTwoWalk);
 (List<string>, string) GetMapAndInstructions()
 {
